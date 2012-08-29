@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Mono.Posix"  Condition=" '$(OS)' != 'Windows_NT' "/>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs"  Condition=" '$(OS)' == 'Windows_NT' "/>
