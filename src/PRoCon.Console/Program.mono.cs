@@ -43,7 +43,7 @@ namespace PRoCon.Console {
                     application.OptionsSettings.AllowAnonymousUsageData = true;
 
                     System.Console.WriteLine("Procon Frostbite for mono");
-                    System.Console.WriteLine("================");
+                    System.Console.WriteLine("=========================");
                     System.Console.WriteLine("By executing this application you agree to the license available at:");
                     System.Console.WriteLine("\thttp://myrcon.com/licenses/myrcon.pdf");
                     System.Console.WriteLine("If you do not agree you must immediately exit this application.");
@@ -55,7 +55,7 @@ namespace PRoCon.Console {
                     application.Execute();
 
                     GC.Collect();
-                    System.Console.WriteLine("Running... (Press any key to shutdown)");
+                    System.Console.WriteLine("Running... (Press ctrl-c to shutdown)");
 					
 					UnixSignal [] signals = new UnixSignal[] { 
 						new UnixSignal(Signum.SIGINT), 
