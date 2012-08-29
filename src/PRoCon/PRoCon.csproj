@@ -24,10 +24,14 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
     <TargetFrameworkProfile />
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -583,7 +587,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent  Condition=" '$(OS)' == 'Windows_NT' ">mkdir "$(SolutionDir)..\builds\$(ConfigurationName)"
+    <PostBuildEvent Condition=" '$(OS)' == 'Windows_NT' ">mkdir "$(SolutionDir)..\builds\$(ConfigurationName)"
 xcopy "$(SolutionDir)Resources\Media" "$(SolutionDir)..\builds\$(ConfigurationName)\Media" /Y /E /I
 xcopy "$(SolutionDir)Resources\Configs" "$(SolutionDir)..\builds\$(ConfigurationName)\Configs" /Y /E /I
 xcopy "$(SolutionDir)Resources\Localization" "$(SolutionDir)..\builds\$(ConfigurationName)\Localization" /Y /E /I
@@ -594,8 +598,7 @@ xcopy "$(SolutionDir)..\doc\procon.doc" "$(SolutionDir)..\builds\$(Configuration
 xcopy "$(SolutionDir)..\doc\myrcon.pdf" "$(SolutionDir)..\builds\$(ConfigurationName)\docs_licenses" /Y
 xcopy "$(SolutionDir)..\doc\LICENSES.txt" "$(SolutionDir)..\builds\$(ConfigurationName)\docs_licenses" /Y
 </PostBuildEvent>
-
- <PostBuildEvent Condition=" '$(OS)' != 'Windows_NT' ">mkdir "$(SolutionDir)..\builds\$(ConfigurationName)"
+    <PostBuildEvent Condition=" '$(OS)' != 'Windows_NT' ">mkdir "$(SolutionDir)..\builds\$(ConfigurationName)"
 cp -a "$(SolutionDir)Resources\Media" "$(SolutionDir)..\builds\$(ConfigurationName)\Media" 
 cp -a "$(SolutionDir)Resources\Configs" "$(SolutionDir)..\builds\$(ConfigurationName)\Configs"
 cp -a "$(SolutionDir)Resources\Localization" "$(SolutionDir)..\builds\$(ConfigurationName)\Localization"
@@ -606,7 +609,5 @@ cp -a "$(SolutionDir)..\doc\procon.doc" "$(SolutionDir)..\builds\$(Configuration
 cp -a "$(SolutionDir)..\doc\myrcon.pdf" "$(SolutionDir)..\builds\$(ConfigurationName)\docs_licenses"
 cp -a "$(SolutionDir)..\doc\LICENSES.txt" "$(SolutionDir)..\builds\$(ConfigurationName)\docs_licenses"
 </PostBuildEvent>
-
-
   </PropertyGroup>
 </Project>
