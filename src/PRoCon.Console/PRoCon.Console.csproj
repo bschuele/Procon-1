@@ -46,7 +46,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs"  Condition=" '$(OS)' == 'Windows_NT' "/>
+    <Compile Include="Program.mono.cs"  Condition=" '$(OS)' != 'Windows_NT' "/>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
